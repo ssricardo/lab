@@ -23,4 +23,4 @@ Use `ConstraintViolationRule` for this goal.  As any Junit Rule, basically you n
 
 The above code will make *ConstraintViolationRule* catch and print the violations for tests in the same class.  If you prefer a different behavior instead of only printing it, just modify it in *ConstraintViolationRule* class.
 
-This utility is available in [ConstraintViolationRule](java/ConstraintViolationRule.java).
+This utility is available in [ConstraintViolationRule](../java/ConstraintViolationRule.java).
