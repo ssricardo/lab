@@ -1,0 +1,28 @@
+@startuml
+
+Document o-- "n" Section
+Section -- "n" Section
+Section o-- "n" Element
+Element -- ElemType
+
+class Document {
+    str style
+    str template
+    str[] states
+}
+
+class Section {
+    str id
+}
+
+class Element {
+    str value
+}
+
+enum ElemType {
+    LABEL, BUTTON...
+}
+
+
+
+@enduml
