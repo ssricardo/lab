@@ -6,9 +6,9 @@ Section o-- "n" Element
 Element -- ElemType
 
 class Document {
-    str style
     str template
     str[] states
+    str[] styles
 }
 
 class Section {
@@ -20,7 +20,15 @@ class Element {
 }
 
 enum ElemType {
-    LABEL, BUTTON...
+    LABEL, 
+    BUTTON, 
+    INPUT-TEXT, 
+    INPUT-EMAIL, 
+    INPUT-SECRET, 
+    CHECKBOX, 
+    RADIO, 
+    DROP-DOWN, 
+    TABLE...
 }
 
 

@@ -1,0 +1,33 @@
+@startuml
+
+    interface Reader {
+        read()
+    }
+
+    class FileReader implements Reader {
+    }
+
+    interface Parser<T> {
+        execute(): T
+    }
+
+    class YaProtoParser implements Parser {
+    }
+
+    interface Renderer<T> {
+        render(T): Stream
+    }
+
+    class HtmlRenderer implements Renderer{
+
+    }
+
+    class Executor {
+        execute(file: str)
+    }
+
+    Executor .. Reader
+    Executor .. Parser
+    Executor .. Renderer
+
+@enduml

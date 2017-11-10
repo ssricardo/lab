@@ -6,20 +6,21 @@
     ---
     template: 'outro.arquivo'
     states: [a, b, c]
-    style: ''
+    styles: ['', '', '']
     ---
 
+# Comentario
+
     section1
-        # Cabeçalho
+        $ Cabeçalho
         Label: [ ] [Botao]
-        Label2: "Um" [x] "Dois" [x]
+        Label2: Um [x] Dois [x]
         Label3: Sim () Nao ()
         Combo: ^Valor^
         
         Input: " "
 
-        #Table#
-        
+        | Table | 
             coluna1
                 dados
                 dados
