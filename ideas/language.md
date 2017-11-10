@@ -6,6 +6,7 @@
     ---
     template: 'outro.arquivo'
     states: [a, b, c]
+    style: ''
     ---
 
     section1
