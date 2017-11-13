@@ -1,4 +1,4 @@
-@startuml
+@startuml "project"
 
     interface Reader {
         read()
@@ -8,7 +8,7 @@
     }
 
     interface Parser<T> {
-        execute(): T
+        parse(): T
     }
 
     class YaProtoParser implements Parser {
@@ -18,8 +18,10 @@
         render(T): Stream
     }
 
-    class HtmlRenderer implements Renderer{
+    class HtmlRenderer implements Renderer {
+    }
 
+    interface HtmlComponentDecorator extends Component {
     }
 
     class Executor {
@@ -29,5 +31,6 @@
     Executor .. Reader
     Executor .. Parser
     Executor .. Renderer
+    Renderer .. HtmlComponentDecorator
 
 @enduml

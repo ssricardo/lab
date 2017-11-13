@@ -1,0 +1,31 @@
+@startuml "main-flow"
+
+participant Executor as e
+participant Reader as rea
+participant ParserDelegate as pd
+participant Parser as par
+participant Renderer as rr
+participant RenderDecorator as rd
+
+e -> rea : read
+rea --> e : File
+e -> pd : parse
+pd -> pd : determine type
+pd -> par : parse
+
+alt parsing failure
+    par --> e : exception    
+    e -> pd : get failures
+    pd --> e: failures
+
+else ok
+    par --> e : Document
+    e -> rd : decorate
+    rd --> e : decorated components
+    e -> rr : render
+    rr --> e : ok
+
+end
+
+
+@enduml
